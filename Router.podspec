@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   # s.dependency = "AFNetworking" # 依赖库
   s
   # User
-  s.author             = { "LinNan" => "18622680246tf@gmail.com" } # 作者信息
+  s.author             = { "LinNan" => "18622680246@163.com" } # 作者信息
   s.social_media_url   = "https://github.com/TwisteFate/" # 个人主页
   s.license = "Copyright (c) 2018年 LinNan. All rights reserved."
 
