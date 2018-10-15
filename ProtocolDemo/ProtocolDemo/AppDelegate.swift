@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  URLBlockDemo
+//  ProtocolDemo
 //
-//  Created by 林楠 on 2018/10/8.
+//  Created by 林楠 on 2018/10/15.
 //  Copyright © 2018年 林楠. All rights reserved.
 //
 
@@ -12,6 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -48,18 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func registerAll() {
-        JYURLRouter.shared.registerURLWithClosure(url: "demo://myViewController") { (json) in
-            var jsonDic: [String: Any] = [:]
-            if let jsonData = json.data(using: .utf8) {
-                jsonDic = try! JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers) as! [String : Any]
-            }
-            let myViewController = MyViewController()
-            let navigationController = self.window?.rootViewController as? UINavigationController
-            navigationController?.pushViewController(myViewController, animated: true)
-            if let userId = jsonDic["id"] as? String {
-                myViewController.loadUserId(userId: userId)
-            }
-        }
+        MyCenterComponent.registerComponent()
     }
 }
 

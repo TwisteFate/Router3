@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  URLBlockDemo
+//  ProtocolDemo
 //
-//  Created by 林楠 on 2018/10/8.
+//  Created by 林楠 on 2018/10/15.
 //  Copyright © 2018年 林楠. All rights reserved.
 //
 
@@ -33,7 +33,10 @@ class ViewController: UIViewController {
     }
 
     @objc private func anotherButtonDidClicked() {
-        JYURLRouter.shared.openURL(url: "demo://myViewController?{\"id\":\"3638463\"}")
+        if let myCenterComponent = JYProtocolCache.shared.objectFromProtocol(protocols: MyCenterComponentProtocol.self) as? MyCenterComponent {
+            let myViewController = myCenterComponent.myViewController()
+            navigationController?.pushViewController(myViewController, animated: true)
+        }
     }
 }
 

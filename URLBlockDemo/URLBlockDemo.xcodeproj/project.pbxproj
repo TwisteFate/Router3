@@ -14,6 +14,7 @@
 		A22897F3216B2FDD00BD9768 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A22897F1216B2FDD00BD9768 /* LaunchScreen.storyboard */; };
 		A22897FE216B2FDD00BD9768 /* URLBlockDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22897FD216B2FDD00BD9768 /* URLBlockDemoUITests.swift */; };
 		A22A43B5216B34090077802F /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22A43B4216B34090077802F /* MyViewController.swift */; };
+		A22A43D5217032A00077802F /* JYURLRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22A43D42170329F0077802F /* JYURLRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		A22897FD216B2FDD00BD9768 /* URLBlockDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBlockDemoUITests.swift; sourceTree = "<group>"; };
 		A22897FF216B2FDD00BD9768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A22A43B4216B34090077802F /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		A22A43D42170329F0077802F /* JYURLRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JYURLRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				A22897E8216B2FD800BD9768 /* AppDelegate.swift */,
 				A22897EA216B2FD800BD9768 /* ViewController.swift */,
+				A22A43D42170329F0077802F /* JYURLRouter.swift */,
 				A22A43B4216B34090077802F /* MyViewController.swift */,
 				A22897EC216B2FD800BD9768 /* Main.storyboard */,
 				A22897EF216B2FDD00BD9768 /* Assets.xcassets */,
@@ -203,6 +206,7 @@
 				A22897EB216B2FD800BD9768 /* ViewController.swift in Sources */,
 				A22A43B5216B34090077802F /* MyViewController.swift in Sources */,
 				A22897E9216B2FD800BD9768 /* AppDelegate.swift in Sources */,
+				A22A43D5217032A00077802F /* JYURLRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
