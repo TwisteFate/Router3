@@ -33,7 +33,8 @@ class ViewController: UIViewController {
     }
 
     @objc private func anotherButtonDidClicked() {
-        if let myCenterComponent = JYProtocolCache.shared.objectFromProtocol(protocols: MyCenterComponentProtocol.self) as? MyCenterComponent {
+        if let myCenterComponentClass = JYProtocolCache.shared.objectFromProtocol(protocols: MyCenterComponentProtocol.self) as? NSObject.Type {
+            let myCenterComponent = myCenterComponentClass.init()
             let myViewController = myCenterComponent.myViewController()
             navigationController?.pushViewController(myViewController, animated: true)
         }

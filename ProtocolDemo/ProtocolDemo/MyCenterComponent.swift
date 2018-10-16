@@ -8,14 +8,14 @@
 
 import UIKit
 
-class MyCenterComponent {
+class MyCenterComponent: NSObject {
 
-    static func registerComponent() {
-        JYProtocolCache.shared.registerProtocolsForObject(protocols: MyCenterComponentProtocol.self, object: MyCenterComponent())
+    class func registerComponent() {
+        JYProtocolCache.shared.registerProtocolsForObject(protocols: MyCenterComponentProtocol.self, object: self)
     }
 }
 
-extension MyCenterComponent: MyCenterComponentProtocol {
+extension NSObject: MyCenterComponentProtocol {
 
     func myViewController() -> UIViewController {
         return MyViewController()

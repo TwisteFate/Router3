@@ -20,14 +20,14 @@ class JYProtocolCache {
     }
 
     /// 注册protocol
-    func registerProtocolsForObject(protocols: Protocol, object: AnyObject) {
+    func registerProtocolsForObject(protocols: Protocol, object: AnyClass) {
         let key = NSStringFromProtocol(protocols)
         cachedClass[key] = object
     }
 
     /// 获取object
-    func objectFromProtocol(protocols: Protocol) -> AnyObject {
+    func objectFromProtocol(protocols: Protocol) -> AnyClass? {
         let key = NSStringFromProtocol(protocols)
-        return cachedClass[key] as AnyObject
+        return cachedClass[key] as? AnyClass
     }
 }
